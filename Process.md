@@ -15,13 +15,33 @@
 If QuickBooks finds an issue with your company file, select Rebuild Now. -->
 ## Step 1 - QuickBooks File Doctor
 <br><i>*** This may alread have been done.</i></br>
-1) Download QuickBooks Tool Hub if not already downloaded. https://dlm2.download.intuit.com/akdlm/SBD/QuickBooks/QBFDT/QuickBooksToolHub.exe?_ga=2.115985990.1185532372.1737984378-2092869960.1737984378
 
-* Ensure the issue isn’t related to basic corruption or installation errors. <br><i>*** This may alread have been done.</i></br>
+Step 1: Download and install QuickBooks Tool Hub. https://dlm2.download.intuit.com/akdlm/SBD/QuickBooks/QBFDT/QuickBooksToolHub.exe?_ga=2.115985990.1185532372.1737984378-2092869960.1737984378
+
+1) Close QuickBooks.
+2) Download the most recent version (1.6.0.8) of the QuickBooks Tool Hub. Save the file somewhere you can easily find it (like your Downloads folder or your Windows desktop). Note: If you've installed Tool Hub before, you can find out which version you have. Select the Home tab. The version will be on the bottom.
+3) Open the file you downloaded (QuickBooksToolHub.exe).
+4) Follow the on-screen steps to install and agree to the terms and conditions.
+5) When the install finishes, double-click the icon on your Windows desktop to open the tool hub.
+
+Step 2: Run Quick Fix my File
+1) From the tool hub, select Company File Issues.
+2) Select Quick Fix my File.
+3) Select OK when it completes and launch your QuickBooks.
+
+Step 3: Run QuickBooks File Doctor
+1) From the tool hub, select Company File Issues.
+2) Select Run QuickBooks File Doctor. It can take up to one minute for the file doctor to open.
+<br><strong>Note:</strong> If the QuickBooks File Doctor doesn't open, search for QuickBooks Desktop File Doc and open it manually.
+3) In QuickBooks File Doctor, select your company file from the dropdown menu. If you don’t see your file, select Browse and search to find your file.
+4) Select Check your file (middle option only) and then Continue.
+5) Enter your QuickBooks admin password and then select Next.
+
+The scan time depends on your file size and can take up to 10–15 minutes. The scan may say it was unsuccessful even if it fixes your issue. Once the scan finishes, open QuickBooks, and your company file.
 
 ## Step 2 - Recreate lost transactions using the current QuickBooks Transaction Log (.QBW.tlg) file and a previous copy of the QuickBooks Company (.QBW) file from December
 
-*** Backup current .QBW and .QBW.tlg files in new directory `C:\Users\Public\Public Documents\Intuit\QuickBooks\Company Files\Backup 01272025`, copy .QBW and .QBW.tlg into it.
+*** Backup current .QBW and .QBW.tlg files in new directory `C:\Users\Public\Public Documents\Intuit\QuickBooks\Company Files\Backup 01272025`, copy .QBW and .QBW.tlg into it. Or see `Backup Instructions.docx`
 
 1) Using Windows Explorer open the folder where your QuickBooks Company (.QBW) file is stored.
 <!-- ![Local Image](image1.png "Image 1") -->
