@@ -6,7 +6,7 @@ REM Prompt user to enter the QuickBooks folder path
 set /p "QBFolder=Enter the path to your QuickBooks folder (leave blank for current directory): "
 
 REM Use current directory if no folder path is entered
-if "%QBFolder%"=="" set "QBFolder=%cd%"
+if "%QBFolder%"=="" set "QBFolder=%OriginalDir%"
 
 REM Verify the folder exists
 if not exist "%QBFolder%" (
@@ -42,13 +42,21 @@ if not exist "%LogFile%" (
 REM Change directory to the QuickBooks folder
 cd /d "%QBFolder%"
 
+REM DEBUG: List all files in the directory for review
+echo DEBUG: Listing all files in the directory >> "%LogFile%"
+dir >> "%LogFile%"
+echo ---------------------------------- >> "%LogFile%"
+
 REM Log details for .QBW and .TLG files (case insensitive search)
 for %%F in (*.qbw *.QBW *.tlg *.TLG) do (
+    echo DEBUG: Processing file %%F >> "%LogFile%"
     if exist "%%F" (
         echo File: %%~nF%%~xF >> "%LogFile%"
         echo Size: %%~zF bytes >> "%LogFile%"
         echo Last Modified: %%~tF >> "%LogFile%"
         echo ---------------------------------- >> "%LogFile%"
+    ) else (
+        echo DEBUG: File %%F not found. >> "%LogFile%"
     )
 )
 
@@ -56,4 +64,5 @@ REM Return to the original directory
 cd /d "%OriginalDir%"
 echo Returned to original directory: %OriginalDir%
 
-echo File details have been
+echo File details have been logged to "%LogFile%"
+pause

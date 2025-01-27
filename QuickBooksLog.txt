@@ -1,0 +1,81 @@
+Logging QuickBooks file details on Mon-01-27 08-55 
+---------------------------------- 
+DEBUG: Listing all files in the directory 
+ Volume in drive D is D SSD
+ Volume Serial Number is E8C6-A9EF
+
+ Directory of D:\repos\chris_stuart
+
+01/27/2025  08:55 AM    <DIR>          .
+01/27/2025  08:34 AM    <DIR>          ..
+01/27/2025  08:34 AM            99,430 image1.png
+01/27/2025  08:34 AM            89,974 image2.png
+01/27/2025  08:34 AM           129,552 image3.png
+01/27/2025  08:54 AM             2,414 log_files_last_saved.cmd
+01/27/2025  08:34 AM             7,350 Process.md
+01/27/2025  08:39 AM                20 QB.qbw
+01/27/2025  08:39 AM                 8 QB.tlg
+01/27/2025  08:55 AM               134 QuickBooksLog.txt
+               8 File(s)        328,882 bytes
+               2 Dir(s)  206,196,183,040 bytes free
+---------------------------------- 
+DEBUG: Processing file QB.qbw 
+File: QB.qbw 
+Size: 20 bytes 
+Last Modified: 01/27/2025 08:39 AM 
+---------------------------------- 
+DEBUG: Processing file QB.qbw 
+File: QB.qbw 
+Size: 20 bytes 
+Last Modified: 01/27/2025 08:39 AM 
+---------------------------------- 
+DEBUG: Processing file QB.tlg 
+File: QB.tlg 
+Size: 8 bytes 
+Last Modified: 01/27/2025 08:39 AM 
+---------------------------------- 
+DEBUG: Processing file QB.tlg 
+File: QB.tlg 
+Size: 8 bytes 
+Last Modified: 01/27/2025 08:39 AM 
+---------------------------------- 
+Run Date/Time: Mon-01-27 08-55 
+DEBUG: Listing all files in the directory 
+ Volume in drive D is D SSD
+ Volume Serial Number is E8C6-A9EF
+
+ Directory of D:\repos\chris_stuart
+
+01/27/2025  08:55 AM    <DIR>          .
+01/27/2025  08:34 AM    <DIR>          ..
+01/27/2025  08:34 AM            99,430 image1.png
+01/27/2025  08:34 AM            89,974 image2.png
+01/27/2025  08:34 AM           129,552 image3.png
+01/27/2025  08:54 AM             2,414 log_files_last_saved.cmd
+01/27/2025  08:34 AM             7,350 Process.md
+01/27/2025  08:39 AM                20 QB.qbw
+01/27/2025  08:39 AM                 8 QB.tlg
+01/27/2025  08:55 AM             1,510 QuickBooksLog.txt
+               8 File(s)        330,258 bytes
+               2 Dir(s)  206,196,183,040 bytes free
+---------------------------------- 
+DEBUG: Processing file QB.qbw 
+File: QB.qbw 
+Size: 20 bytes 
+Last Modified: 01/27/2025 08:39 AM 
+---------------------------------- 
+DEBUG: Processing file QB.qbw 
+File: QB.qbw 
+Size: 20 bytes 
+Last Modified: 01/27/2025 08:39 AM 
+---------------------------------- 
+DEBUG: Processing file QB.tlg 
+File: QB.tlg 
+Size: 8 bytes 
+Last Modified: 01/27/2025 08:39 AM 
+---------------------------------- 
+DEBUG: Processing file QB.tlg 
+File: QB.tlg 
+Size: 8 bytes 
+Last Modified: 01/27/2025 08:39 AM 
+---------------------------------- 
