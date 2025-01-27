@@ -34,46 +34,32 @@ if not exist "%LogFile%" (
 REM Change directory to the QuickBooks folder
 cd /d "%QBFolder%"
 
-REM DEBUG: List all files in the directory for review
-echo DEBUG: Listing all files in the directory >> "%LogFile%"
-dir >> "%LogFile%"
-echo ---------------------------------- >> "%LogFile%"
-
 REM Log details for .QBW and .TLG files (case insensitive search)
 for %%F in (*.qbw *.QBW *.tlg *.TLG) do (
-    echo DEBUG: Processing file %%F >> "%LogFile%"
     if exist "%%F" (
-        echo File: %%~nF%%~xF >> "%LogFile%"
+        echo Processing file: %%~nxF >> "%LogFile%"
+        echo File: %%~nxF >> "%LogFile%"
         echo Size: %%~zF bytes >> "%LogFile%"
         echo Last Modified: %%~tF >> "%LogFile%"
         echo ---------------------------------- >> "%LogFile%"
-    ) else (
-        echo DEBUG: File %%F not found. >> "%LogFile%"
     )
 )
 
 REM Check and log details for QuickBooksAutoDataRecovery folder
 set "ADRFolder=%QBFolder%\QuickBooksAutoDataRecovery"
 if exist "%ADRFolder%" (
-    echo DEBUG: Listing all files in QuickBooksAutoDataRecovery folder >> "%LogFile%"
-    echo Files in %ADRFolder%: >> "%LogFile%"
-    dir "%ADRFolder%" >> "%LogFile%"
-    echo ---------------------------------- >> "%LogFile%"
-
-    REM Log details for files within QuickBooksAutoDataRecovery folder
+    echo Listing all files in QuickBooksAutoDataRecovery folder >> "%LogFile%"
     for %%F in ("%ADRFolder%\*") do (
-        echo DEBUG: Processing ADR file %%~nxF >> "%LogFile%"
         if exist "%%F" (
+            echo Processing ADR file: %%~nxF >> "%LogFile%"
             echo File: %%~nxF >> "%LogFile%"
             echo Size: %%~zF bytes >> "%LogFile%"
             echo Last Modified: %%~tF >> "%LogFile%"
             echo ---------------------------------- >> "%LogFile%"
-        ) else (
-            echo DEBUG: ADR file %%~nxF not found. >> "%LogFile%"
         )
     )
 ) else (
-    echo DEBUG: QuickBooksAutoDataRecovery folder not found at %ADRFolder% >> "%LogFile%"
+    echo QuickBooksAutoDataRecovery folder not found at %ADRFolder% >> "%LogFile%"
 )
 
 REM Return to the original directory
