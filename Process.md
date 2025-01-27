@@ -128,10 +128,3 @@ The scan time depends on your file size and can take up to 10–15 minutes. The 
 | **When to Use**            | When the `.QBW.TLG` file is intact and can reliably append transactions to the `.QBW.adr` file.         | When the `.QBW.TLG` file is corrupted or missing, and the `.QBW.TLG.adr` file is available.           |
 | **Risk of Data Loss**      | Minimal, as all recent transactions in the `.QBW.TLG` file will be appended to the `.QBW.adr` file.     | Possible loss of a few hours of transactions, as the `.QBW.TLG.adr` file may not be fully up-to-date. |
 | **Outcome**                | Restores the `.QBW` file using the `.QBW.adr` file and supplements it with transactions from `.QBW.TLG`.| Restores the `.QBW` file using the `.QBW.adr` file and `.QBW.TLG.adr` from the `QuickBooks\Company Files\QuickBooksAutoDataRecovery` folder.|
-
-
-## Step 4 - Use Stellar Repair for QuickBooks
-1) Download from the following link:
-
-https://www.stellarinfo.com/file-repair/quickbooks-recovery/quickbooks-recovery.php?gad_source=1&gclid=CjwKCAiA-ty8BhA_EiwAkyoa36Dy8j1H_m6IR0iaw3vvl7zwWpyvH-4dAWAFYyTZbjxottTT7rNi7xoCCh4QAvD_BwE
-* Free download allows to preview the recoverable data. If we're able to view the data, then I will supply the product key via Upwork for the licensed version.
