@@ -1,19 +1,35 @@
 # Quickbooks Recovery Process
 
-## Step 1 - QuickBooks File Doctor (15 minutes)
+## Step 1 - Repair your company file using the Rebuild Data tool
+* The Rebuild Data tool is built-in to QuickBooks Desktop and automatically fixes minor company file data issues.
+
+1) Go to the File menu, then hover over Utilities and select Rebuild Data.
+2) On the QuickBooks Information window, select OK. Follow the onscreen steps to save a backup.
+3) Let the tool repair your file. It may take some time. QuickBooks may seem stuck, but as long as you can move your mouse, the tool is working.
+4) When the tool finishes, select OK.
+5) Go to the File menu. Then hover over Utilities and select Verify Data.
+6) Let the tool check your file for data issues.
+7) If QuickBooks doesn't find any problems, select OK. You can keep using your company file. You don't have any data damage.
+
+If QuickBooks finds an issue with your company file, select Rebuild Now.
+## Step 2 - QuickBooks File Doctor (15 minutes)
+1) Download QuickBooks Tool Hug. https://dlm2.download.intuit.com/akdlm/SBD/QuickBooks/QBFDT/QuickBooksToolHub.exe?_ga=2.115985990.1185532372.1737984378-2092869960.1737984378
 
 * Ensure the issue isn’t related to basic corruption or installation errors. <br><i>*** This may alread have been done.</i></br>
 
-## Step 2 - Recreate lost transactions using the current QuickBooks Transaction Log (.QBW.tlg) file and a previous copy of the QuickBooks Company (.QBW) file from December
+## Step 3 - Recreate lost transactions using the current QuickBooks Transaction Log (.QBW.tlg) file and a previous copy of the QuickBooks Company (.QBW) file from December
 
 *** Backup current .QBW and .QBW.tlg files in new directory `C:\Users\Public\Public Documents\Intuit\QuickBooks\Company Files\Backup 01272025`, copy .QBW and .QBW.tlg into it.
 
 1) Using Windows Explorer open the folder where your QuickBooks Company (.QBW) file is stored.
 <!-- ![Local Image](image1.png "Image 1") -->
 
-2) If file extensions are not visible, make them visible (Uncheck `Hide extensions for known file types`)
+2) If file extensions are not visible, make them visible (Windows Explorer > Options > View > Uncheck `Hide extensions for known file types`)
 
-3) Note the size and date modified for both your QuickBooks Company (.QBW) file and the QuickBooks Transaction Log (.QBW.tlg) file.
+3) Copy the file log_files_last_saved.cmd to the QuickBooks\Company Files folder and then execute it, this will save the details of when the .tlg and .qbw files were last modified.
+```
+log_files_last_saved.cmd
+```
 
 4) Within your Company Files folder, create a new folder named `Backup 01272025`
 
@@ -44,14 +60,17 @@
 **Published on**: *March 8, 2015 10:31 PM*
 **Accessed on**: *January 27, 2025*
 
-## Step 3 - (If Step 2 fails) QuickBooks Auto Data Recovery - Using ADR File Sets
+## Step 4 - (If Step 2 fails) QuickBooks Auto Data Recovery - Using ADR File Sets
 1) Using an Auto Data Recovery file-set to recover all but the last few hours of transactions.
     * Backup current .QBW and .QBW.tlg files in new directory `C:\Users\Public\Public Documents\Intuit\QuickBooks\Company Files\Backup 01272025_2`, copy .QBW and .QBW.tlg into it.
 1) Using Windows Explorer open the folder where your QuickBooks Company (.QBW) file is stored.
 
-2) If file extensions are not visible, make them visible (see the Windows operating instructions for your version of the Windows-OS if you are not familiar with this step.)
+2) If file extensions are not visible, make them visible (Windows Explorer > Options > View > Uncheck `Hide extensions for known file types`)
 
-3) Note the size and date modified for both your QuickBooks Company (.QBW) file and the QuickBooks Transaction Log (.QBW.tlg) file.
+3) Copy the file log_files_last_saved.cmd to the QuickBooks\Company Files folder and then execute it, this will save the details of when the .tlg and .qbw files were last modified.
+```
+log_files_last_saved.cmd
+```
 
 4) Within your Company Files folder, create a new folder named `Backup 01272025_2`
 
@@ -91,5 +110,5 @@
 
 (Note: If you find that this restored set of data also contains the same corruptions, you may need to repeat these steps using the 'older' set of data withing the Auto Data Recovery file folder.  While the file names will also include .old in the exponent of each file, the procedure for restoration is identical with the exception that you will need to change file extensions to also remove the .old portion of the extension from the file names, in addition to removing the .adr portion of the extension from the file names.)
 
-## Step 4 - (If Steps 2 and 3 fail) Use Stellar Repair
+## Step 5 - (If Steps 2 and 3 fail) Use Stellar Repair
 * https://cloud.stellarinfo.com/StellarRepairforQuickBooksSoftware-A.exe?_ga=2.119774792.1355178001.1737990812-442019885.1737990812
