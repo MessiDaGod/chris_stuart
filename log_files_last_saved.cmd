@@ -6,7 +6,9 @@ REM Prompt user to enter the QuickBooks folder path
 set /p "QBFolder=Enter the path to your QuickBooks folder (leave blank for current directory): "
 
 REM Use current directory if no folder path is entered
-if "%QBFolder%"=="" set "QBFolder=%OriginalDir%"
+if "%QBFolder%"=="" (
+    set "QBFolder=%OriginalDir%"
+)
 
 REM Verify the folder exists
 if not exist "%QBFolder%" (
@@ -19,7 +21,9 @@ REM Prompt user to enter the base name for the log file
 set /p "LogFile=Enter the path and filename for the log file (leave blank for current directory, QuickBooksLog.txt): "
 
 REM Use default log file name if no input is provided
-if "%LogFile%"=="" set "LogFile=%QBFolder%\QuickBooksLog.txt"
+if "%LogFile%"=="" (
+    set "LogFile=%QBFolder%\QuickBooksLog.txt"
+)
 
 REM Inform the user about the log file being used
 echo Using log file: %LogFile%
