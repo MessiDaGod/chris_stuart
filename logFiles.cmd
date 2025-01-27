@@ -1,14 +1,14 @@
 @echo off
-REM Save the directory where the script is being executed
-set "OriginalDir=%cd%"
+REM Automatically use the directory where the script is executed
+set "QBFolder=%~dp0"
 
-REM Prompt user to enter the QuickBooks folder path
-set /p "QBFolder=Enter the path to your QuickBooks folder (leave blank for current directory): "
+REM Set default log file location
+set "LogFile=%QBFolder%\QuickBooksLog.txt"
 
-REM Use current directory if no folder path is entered
-if "%QBFolder%"=="" (
-    set "QBFolder=%OriginalDir%"
-)
+REM Inform the user about the log file being used
+echo Using QuickBooks folder: %QBFolder%
+echo Using log file: %LogFile%
+echo.
 
 REM Verify the folder exists
 if not exist "%QBFolder%" (
@@ -16,18 +16,6 @@ if not exist "%QBFolder%" (
     pause
     exit /b
 )
-
-REM Prompt user to enter the base name for the log file
-set /p "LogFile=Enter the path and filename for the log file (leave blank for current directory, QuickBooksLog.txt): "
-
-REM Use default log file name if no input is provided
-if "%LogFile%"=="" (
-    set "LogFile=%QBFolder%\QuickBooksLog.txt"
-)
-
-REM Inform the user about the log file being used
-echo Using log file: %LogFile%
-echo.
 
 REM Get the current date and time
 for /f "tokens=1-4 delims=/ " %%A in ('date /t') do set curDate=%%A-%%B-%%C
@@ -89,8 +77,8 @@ if exist "%ADRFolder%" (
 )
 
 REM Return to the original directory
-cd /d "%OriginalDir%"
-echo Returned to original directory: %OriginalDir%
+cd /d "%~dp0"
+echo Returned to original directory: %~dp0
 
 echo File details have been logged to "%LogFile%"
 pause
