@@ -1,24 +1,39 @@
 # Quickbooks Recovery Process
 
-## Step 0 - IMPORTANT - DO THIS FIRST NO MATTER WHAT
+# Step 0 - IMPORTANT - DO THIS FIRST NO MATTER WHAT
 
-1) Within your `QuickBooks\Company Files` folder, create a new folder named `QuickBooks\Company Files\Backup 01272025`
+## Create a Backup Folder:
+1. In the location where your `QuickBooks\Company Files` folder resides, create a folder named `Backup 01272025`.
 
-2) COPY your QuickBooks Files `.QBW` and `.QBW.TLG` from your `QuickBooks\Company Files` folder, and
+## Copy and Compress Entire Folder:
+1. Copy the entire `QuickBooks\Company Files` folder (including all subfolders and files) into the newly created `Backup 01272025` folder.
+2. Optionally, compress (zip) the `Backup 01272025` folder for space efficiency and easy portability.
 
-3) Paste both into the newly created `QuickBooks\Company Files\Backup 01272025` folder
+## Verify the Backup:
+1. After copying or compressing, ensure the backup folder contains all necessary files:
+   - `.QBW` (QuickBooks Company File)
+   - `.QBW.TLG` (Transaction Log File)
+   - `.ADR` or `.ADR.OLD` files from the `QuickBooks\Company Files\QuickBooksAutoDataRecovery` folder
+   - Any `.ND` or `.DSN` files required for multi-user or networking.
+
+## Store the Backup Safely:
+1. Save the `Backup 01272025` folder to a safe location, such as:
+   - An external hard drive
+   - A secure network drive
+   - A cloud storage service (e.g., Google Drive, OneDrive)
+
 
 ### Key Points to Remember:
 1) Same Folder Requirement:
-    * Both the .QBW and .TLG files must be in the same folder for QuickBooks to function properly.
+    * Both the `.QBW` and `.QBW.TLG` files must be in the same folder for QuickBooks to function properly.
 
 2) Backup Safety:
 
-    * When you back up the .QBW file, always back up the .TLG file as well to ensure consistency during recovery.
+    * When you back up the `.QBW` file, always back up the `.QBW.TLG` file as well to ensure consistency during recovery.
 
 3) During Recovery:
 
-    * If you replace the .QBW file with a renamed .QBW.adr file, QuickBooks will still use the .TLG file in the same folder to reconstruct recent transactions.
+    * If you replace the `.QBW` file with a renamed `.QBW.adr` -> `.QBW` file, QuickBooks will still use the `.QBW.TLG` file in the same folder to reconstruct recent transactions.
 
 ## Step 1 - QuickBooks File Doctor
 <br><i>*** This may alread have been done.  If so, we can skip to Step 2.</i></br>
@@ -54,15 +69,15 @@ The scan time depends on your file size and can take up to 10–15 minutes. The 
 
 2) If file extensions are not visible, make them visible (Windows Explorer > Options > View > Uncheck `Hide extensions for known file types`)
 
-3) Copy the file `log_files_last_saved.cmd` to the `QuickBooks\Company Files` folder and then execute it (navigate to the `Company Files` folder in windows explorer, in the address bar type `cmd` and then hit enter, this will open the command prompt in the current directory, then you can enter `log_files_last_saved.cmd` and hit enter, then follow the prompts to run it, which will log the .QBW and .TLG file sizes and last modified dates), this will save the details of when the .TLG and .QBW files were last modified.
+3) Copy the file `logFiles.cmd` to the `QuickBooks\Company Files` folder and then execute it (navigate to the `QuickBooks\Company Files` folder in windows explorer, in the address bar type `cmd` and then hit enter, this will open the command prompt in the current directory, then you can enter `logFiles.cmd` and hit enter, then follow the prompts to run it, which will log the `.QBW` and `.QBW.TLG` file sizes and last modified dates), this will save the details of when the `.QBW.TLG` and `.QBW` files were last modified.
 
 4) Navigate to `QuickBooks\Company Files` folder.
 
-5) Since you have already backed up the `.QBW` to the `QuickBooks\Company Files\Backup 01272025` folder - IMPORTANT - if this hasn't been done, make sure Step 0 was completed!!!) `DELETE` your QuickBooks Company (`.QBW`) file from your `QuickBooks\Company Files` folder.
+5) Since you have already backed up the `.QBW` to the `QuickBooks\Company Files\Backup 01272025` folder - IMPORTANT - if this hasn't been done, make sure Step 0 was completed!!!), now you can safely `DELETE` your QuickBooks Company (`.QBW`) file from your `QuickBooks\Company Files` folder.
 
-6) Locate and open the `QuickBooksAutoDataRecovery` folder within your Company Files folder
+6) Locate and open the  `QuickBooks\Company Files\QuickBooksAutoDataRecovery` folder.
 
-7) Identify all files within the `QuickBooksAutoDataRecovery` folder – the number of files may vary depending on several factors. (Files are typically produced every 12 hours. Newer files will have file extensions of `.adr` appended to their normal file extensions.  Older files will have file extensions of `.adr.old` appended to their normal file extensions  Note the date, time and size of each file.)
+7) Identify all files within the `QuickBooks\Company Files\QuickBooksAutoDataRecovery` folder – the number of files may vary depending on several factors. (Files are typically produced every 12 hours. Newer files will have file extensions of `.adr` appended to their normal file extensions.  Older files will have file extensions of `.adr.old` appended to their normal file extensions  Note the date, time and size of each file.)
 
     * ***Files with `.adr.old` extensions are older backups. Use these only if the `.adr` files fail.
 
@@ -83,21 +98,23 @@ The scan time depends on your file size and can take up to 10–15 minutes. The 
 ## Step 3 - Recover Data Using Full ADR File Sets (If Step 2 Fails)
 1) Using an Auto Data Recovery file-set to recover all but the last few hours of transactions.
 
-1) Using Windows Explorer open the folder where your QuickBooks Company (`.QBW`) file is stored (`QuickBooks\Company Files`).
+1) Using Windows Explorer open the folder where your QuickBooks Company (`.QBW`) and QuickBooks Company Transaction Log (`.QBW.TLG`) file is stored (`QuickBooks\Company Files`).
 
-2) Locate and open the `QuickBooksAutoDataRecovery` folder within your `QuickBooks\Company Files` folder.
+2) Locate and open the  `QuickBooks\Company Files\QuickBooksAutoDataRecovery` folder.
 
-3) Identify all files within the `QuickBooksAutoDataRecovery` folder – the number of files may vary depending on several factors. (Files are typically produced every 12 hours. Newer files will have file extensions of .adr appended to their normal file extensions. Older files will have file extensions of `.adr.old` appended to their normal file extensions. Note the date, time, and size of each file.)
+3) Identify all files within the `QuickBooks\Company Files\QuickBooksAutoDataRecovery` folder – the number of files may vary depending on several factors. (Files are typically produced every 12 hours. Newer files will have file extensions of .adr appended to their normal file extensions. Older files will have file extensions of `.adr.old` appended to their normal file extensions. Note the date, time, and size of each file.)
 
 4) Copy the file ending in `.QBW.TLG.adr` and return to your `QuickBooks\Company Files` folder.
 
-5) Paste the file you just copied into your `QuickBooks\Company Files` folder and `DELETE` your QuickBooks Company Transaction Log (`.QBW.TLG`) file from your `QuickBooks\Company Files` folder (since it's already been backed up in `QuickBooks\Company Files\Backup 01272025` folder - IMPORTANT - if this hasn't been done, make sure Step 0 was completed!!!)
+6) PASTE the file ending in `.QBW.TLG.adr` into the `QuickBooks\Company Files` folder.
+
+5) Since you have already backed up the `.QBW.TLG` to the `QuickBooks\Company Files\Backup 01272025` folder -  you can now safely `DELETE` your QuickBooks Company Transaction Log (`.QBW.TLG`) file from your `QuickBooks\Company Files` folder.
 
 6) Rename the `.QBW.TLG.adr` file so as to remove the `.adr` file extension. The renamed file should now only have an extension of `.QBW.TLG` (this file has now replaced your prior QuickBooks Transaction Log file).
 
 7) Open QuickBooks.
 
-8) Open your Company file – as you do this the QuickBooks Database Server will scan both the `.QBW` and `.QBW.TLG` files you just restored from the `QuickBooksAutoDataRecovery` folder and will confirm that both files have matching data. You file should open normally and you will be back in business as of the date and time of the files when they were replicated.
+8) Open your Company file – as you do this the QuickBooks Database Server will scan both the `.QBW` and `.QBW.TLG` in the `QuickBooks\Company Files` folder with the files you just restored from the `QuickBooks\Company Files\QuickBooksAutoDataRecovery` folder and will confirm that both files have matching data. You file should open normally and you will be back in business as of the date and time of the files when they were replicated.
 
 9) Run the Verify Data utility, Review the QBWin.log if Verify Does not complete normally.
 
@@ -107,10 +124,10 @@ The scan time depends on your file size and can take up to 10–15 minutes. The 
 
 | **Aspect**                 |   **Step 2**                                                                       |  **Step 3**                                                                            |
 |----------------------------|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| **Transaction Log File**   | Uses the live `.QBW.TLG` file from the Company Files folder.                                            | Uses the `.QBW.TLG.adr` file from the `QuickBooksAutoDataRecovery` folder.                      |
+| **Transaction Log File**   | Uses the live `.QBW.TLG` file from the Company Files folder.                                            | Uses the `.QBW.TLG.adr` file from the `QuickBooks\Company Files\QuickBooksAutoDataRecovery` folder.                      |
 | **When to Use**            | When the `.QBW.TLG` file is intact and can reliably append transactions to the `.QBW.adr` file.         | When the `.QBW.TLG` file is corrupted or missing, and the `.QBW.TLG.adr` file is available.           |
 | **Risk of Data Loss**      | Minimal, as all recent transactions in the `.QBW.TLG` file will be appended to the `.QBW.adr` file.     | Possible loss of a few hours of transactions, as the `.QBW.TLG.adr` file may not be fully up-to-date. |
-| **Outcome**                | Restores the `.QBW` file using the `.QBW.adr` file and supplements it with transactions from `.QBW.TLG`.| Restores the `.QBW` file using the `.QBW.adr` file and `.QBW.TLG.adr` from the `QuickBooksAutoDataRecovery` folder.|
+| **Outcome**                | Restores the `.QBW` file using the `.QBW.adr` file and supplements it with transactions from `.QBW.TLG`.| Restores the `.QBW` file using the `.QBW.adr` file and `.QBW.TLG.adr` from the `QuickBooks\Company Files\QuickBooksAutoDataRecovery` folder.|
 
 
 ## Step 4 - Use Stellar Repair for QuickBooks
