@@ -41,7 +41,7 @@ The scan time depends on your file size and can take up to 10–15 minutes. The 
 
 ## Step 2 - Recreate lost transactions using the current QuickBooks Transaction Log (.QBW.tlg) file and a previous copy of the QuickBooks Company (.QBW) file from December
 
-*** Backup current .QBW and .QBW.tlg files in new directory `C:\Users\Public\Public Documents\Intuit\QuickBooks\Company Files\Backup 01272025`, copy .QBW and .QBW.tlg into it. Or see `Backup Instructions.docx`
+*** Backup current database following instructions in `Backup Instructions.docx`.
 
 1) Using Windows Explorer open the folder where your QuickBooks Company (.QBW) file is stored.
 <!-- ![Local Image](image1.png "Image 1") -->
@@ -77,14 +77,15 @@ log_files_last_saved.cmd
 14) Run the Verify Data utility, Review the QBWin.log if Verify Does not complete normally.
 
 15) Use reports and/or account registers to manually verify all restored transactions.
-**Title**: [QuickBooks Auto Data Recovery – Part 2: Using the Current QB](https://insightfulaccountant.com/accounting-tech/general-ledger/quickbooks-auto-data-recovery-%E2%80%93-part-2%3A-using-the-current-qb/)
+<!-- **Title**: [QuickBooks Auto Data Recovery – Part 2: Using the Current QB](https://insightfulaccountant.com/accounting-tech/general-ledger/quickbooks-auto-data-recovery-%E2%80%93-part-2%3A-using-the-current-qb/)
 **Source**: Insightful Accountant
 **Published on**: *March 8, 2015 10:31 PM*
-**Accessed on**: *January 27, 2025*
+**Accessed on**: *January 27, 2025* -->
 
 ## Step 3 - (If Step 2 fails) QuickBooks Auto Data Recovery - Using ADR File Sets
 1) Using an Auto Data Recovery file-set to recover all but the last few hours of transactions.
-    * Backup current .QBW and .QBW.tlg files in new directory `C:\Users\Public\Public Documents\Intuit\QuickBooks\Company Files\Backup 01272025_2`, copy .QBW and .QBW.tlg into it.
+*** Backup current database following instructions in `Backup Instructions.docx`.
+
 1) Using Windows Explorer open the folder where your QuickBooks Company (.QBW) file is stored.
 
 2) If file extensions are not visible, make them visible (Windows Explorer > Options > View > Uncheck `Hide extensions for known file types`)
