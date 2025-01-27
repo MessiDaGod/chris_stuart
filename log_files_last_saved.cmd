@@ -18,30 +18,22 @@ set /p "LogFile=Enter the path and filename for the log file (leave blank for cu
 REM Use default log file name if no input is provided
 if "%LogFile%"=="" set "LogFile=%QBFolder%\QuickBooksLog.txt"
 
-REM Check if the log file exists and create a unique file name
-set "BaseLogFile=%LogFile%"
-set "Counter=1"
-:check_file
-if exist "%LogFile%" (
-    for %%A in ("%BaseLogFile%") do (
-        set "LogFile=%%~dpnA_%Counter%%%~xA"
-    )
-    set /a Counter+=1
-    goto check_file
-)
-
 REM Inform the user about the log file being used
 echo Using log file: %LogFile%
 echo.
 
-REM Clear the log file (or initialize it)
-echo Logging QuickBooks file details > "%LogFile%"
-echo ---------------------------------- >> "%LogFile%"
+REM Write a header to the log file if it's empty
+if not exist "%LogFile%" (
+    echo Logging QuickBooks file details > "%LogFile%"
+    echo ---------------------------------- >> "%LogFile%"
+) else (
+    echo Appending new entries to existing log file...
+)
 
 REM Change directory to the QuickBooks folder
 cd /d "%QBFolder%"
 
-REM Log details for .QBW and .TLG files
+REM Append details for .QBW and .TLG files
 for %%F in (*.QBW *.TLG) do (
     echo File: %%~nF%%~xF >> "%LogFile%"
     echo Size: %%~zF bytes >> "%LogFile%"
@@ -49,5 +41,5 @@ for %%F in (*.QBW *.TLG) do (
     echo ---------------------------------- >> "%LogFile%"
 )
 
-echo File details have been logged to "%LogFile%"
+echo File details have been appended to "%LogFile%"
 pause
