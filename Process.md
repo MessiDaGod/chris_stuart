@@ -1,6 +1,7 @@
 # Quickbooks Recovery Process
 
 ## Step 1 - Repair your company file using the Rebuild Data tool
+<br><i>*** This may alread have been done.</i></br>
 * The Rebuild Data tool is built-in to QuickBooks Desktop and automatically fixes minor company file data issues.
 
 1) Go to the File menu, then hover over Utilities and select Rebuild Data.
@@ -12,7 +13,8 @@
 7) If QuickBooks doesn't find any problems, select OK. You can keep using your company file. You don't have any data damage.
 
 If QuickBooks finds an issue with your company file, select Rebuild Now.
-## Step 2 - QuickBooks File Doctor (15 minutes)
+## Step 2 - QuickBooks File Doctor
+<br><i>*** This may alread have been done.</i></br>
 1) Download QuickBooks Tool Hug. https://dlm2.download.intuit.com/akdlm/SBD/QuickBooks/QBFDT/QuickBooksToolHub.exe?_ga=2.115985990.1185532372.1737984378-2092869960.1737984378
 
 * Ensure the issue isn’t related to basic corruption or installation errors. <br><i>*** This may alread have been done.</i></br>
@@ -110,5 +112,5 @@ log_files_last_saved.cmd
 
 (Note: If you find that this restored set of data also contains the same corruptions, you may need to repeat these steps using the 'older' set of data withing the Auto Data Recovery file folder.  While the file names will also include .old in the exponent of each file, the procedure for restoration is identical with the exception that you will need to change file extensions to also remove the .old portion of the extension from the file names, in addition to removing the .adr portion of the extension from the file names.)
 
-## Step 5 - (If Steps 2 and 3 fail) Use Stellar Repair
-* https://cloud.stellarinfo.com/StellarRepairforQuickBooksSoftware-A.exe?_ga=2.119774792.1355178001.1737990812-442019885.1737990812
+<!-- ## Step 5 - (If Steps 2 and 3 fail) Use Stellar Repair
+* https://cloud.stellarinfo.com/StellarRepairforQuickBooksSoftware-A.exe?_ga=2.119774792.1355178001.1737990812-442019885.1737990812 -->
