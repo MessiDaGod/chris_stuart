@@ -4,7 +4,7 @@
 
 1) Within your Company Files folder, create a new folder named `Backup 01272025`
 
-2) COPY your QuickBooks Transaction Log (.QBW.TLG) and your .QBW file from your Company Files folder, and
+2) COPY your QuickBooks Transaction Log .QBW.TLG and your .QBW file from your Company Files folder, and
 
 3) Paste both into the newly created `Backup 01272025` folder
 
