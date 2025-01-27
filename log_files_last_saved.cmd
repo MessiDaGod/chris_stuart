@@ -64,6 +64,30 @@ for %%F in (*.qbw *.QBW *.tlg *.TLG) do (
     )
 )
 
+REM Check and log details for QuickBooksAutoDataRecovery folder
+set "ADRFolder=%QBFolder%\QuickBooksAutoDataRecovery"
+if exist "%ADRFolder%" (
+    echo DEBUG: Listing all files in QuickBooksAutoDataRecovery folder >> "%LogFile%"
+    echo Files in %ADRFolder%: >> "%LogFile%"
+    dir "%ADRFolder%" >> "%LogFile%"
+    echo ---------------------------------- >> "%LogFile%"
+
+    REM Log details for files within QuickBooksAutoDataRecovery folder
+    for %%F in ("%ADRFolder%\*") do (
+        echo DEBUG: Processing ADR file %%~nxF >> "%LogFile%"
+        if exist "%%F" (
+            echo File: %%~nxF >> "%LogFile%"
+            echo Size: %%~zF bytes >> "%LogFile%"
+            echo Last Modified: %%~tF >> "%LogFile%"
+            echo ---------------------------------- >> "%LogFile%"
+        ) else (
+            echo DEBUG: ADR file %%~nxF not found. >> "%LogFile%"
+        )
+    )
+) else (
+    echo DEBUG: QuickBooksAutoDataRecovery folder not found at %ADRFolder% >> "%LogFile%"
+)
+
 REM Return to the original directory
 cd /d "%OriginalDir%"
 echo Returned to original directory: %OriginalDir%
