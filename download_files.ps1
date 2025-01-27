@@ -10,6 +10,13 @@ try {
     Write-Host "Downloading file from $sourceUrl to $destinationPath..."
     Invoke-WebRequest -Uri $sourceUrl -OutFile $destinationPath -UseBasicParsing
     Write-Host "File successfully downloaded to $destinationPath"
+
+    # Extract the folder path from the destination file path
+    $folderPath = Split-Path -Path $destinationPath -Parent
+
+    # Open the folder in Windows Explorer
+    Write-Host "Opening folder: $folderPath"
+    Start-Process explorer.exe $folderPath
 } catch {
     Write-Error "Failed to download the file: $_"
 }
