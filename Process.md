@@ -69,7 +69,7 @@ The scan time depends on your file size and can take up to 10–15 minutes. The 
 
 2) If file extensions are not visible, make them visible (Windows Explorer > Options > View > Uncheck `Hide extensions for known file types`)
 
-3) Copy the file `logFiles.cmd` to the `QuickBooks\Company Files` folder and then execute it (navigate to the `QuickBooks\Company Files` folder in windows explorer, in the address bar type `cmd` and then hit enter, this will open the command prompt in the current directory, then you can enter `logFiles.cmd` and hit enter, then follow the prompts to run it, which will log the `.QBW` and `.QBW.TLG` file sizes and last modified dates), this will save the details of when the `.QBW.TLG` and `.QBW` files were last modified.
+3) Copy the file `logFiles.cmd` to the `QuickBooks\Company Files` folder and then execute it (navigate to the `QuickBooks\Company Files` folder in windows explorer, in the address bar type `cmd` and then hit enter, this will open the command prompt in the current directory, then you can enter `logFiles.cmd` and hit enter. This will log to a file all files within the `QuickBooks\Company Files` and `QuickBooks\Company Files\QuickBooksAutoDataRecovery` folders – the number of files may vary depending on several factors. (Files are typically produced every 12 hours. Newer files will have file extensions of .adr appended to their normal file extensions. Older files will have file extensions of `.adr.old` appended to their normal file extensions. Note the date, time, and size of each file.)
 
 4) Navigate to `QuickBooks\Company Files` folder.
 
@@ -102,7 +102,7 @@ The scan time depends on your file size and can take up to 10–15 minutes. The 
 
 2) Locate and open the  `QuickBooks\Company Files\QuickBooksAutoDataRecovery` folder.
 
-3) Identify all files within the `QuickBooks\Company Files\QuickBooksAutoDataRecovery` folder – the number of files may vary depending on several factors. (Files are typically produced every 12 hours. Newer files will have file extensions of .adr appended to their normal file extensions. Older files will have file extensions of `.adr.old` appended to their normal file extensions. Note the date, time, and size of each file.)
+3) Navigate to the `QuickBooks\Company Files` folder and then execute it (navigate to the `QuickBooks\Company Files` folder in windows explorer, in the address bar type `cmd` and then hit enter, this will open the command prompt in the current directory, then you can enter `logFiles.cmd` and hit enter. This will log to a file all files within the `QuickBooks\Company Files` and `QuickBooks\Company Files\QuickBooksAutoDataRecovery` folders – the number of files may vary depending on several factors. (Files are typically produced every 12 hours. Newer files will have file extensions of .adr appended to their normal file extensions. Older files will have file extensions of `.adr.old` appended to their normal file extensions. Note the date, time, and size of each file.)
 
 4) Copy the file ending in `.QBW.TLG.adr` and return to your `QuickBooks\Company Files` folder.
 
